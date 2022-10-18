@@ -32,14 +32,29 @@ function quadrado(){
     }
 }
 function total(){
+
     let valor = document.getElementById("val").value;
     let juros = document.getElementById("ju").value;
     let mes = document.getElementById("mes").value;
+
+   
     let resultado = 0;
     for(let i = 1; i <= mes; i++){
         resultado = valor * (1+(juros/100));
         valor = resultado;
     }
+        if (!Number(valor)) {
+            alert ("o valor deve ser um número.");
+            return
+        } 
+        if (!Number(juros)) {
+            alert ("o juros deve ser um número.");
+            return
+        }
+        if (!Number(mes)) {
+            alert ("o mês deve ser um número.");
+            return
+        }
     
     document.write("O Resultado é " + resultado);
 }
@@ -67,3 +82,4 @@ function soma(){
     let r = 180 - (Number(n1) + Number(n2) + Number(n3));
     document.getElementById("resultado").innerHTML = r;
  }
+
