@@ -37,24 +37,35 @@ function total(){
     let juros = document.getElementById("ju").value;
     let mes = document.getElementById("mes").value;
 
+    if (!Number(valor)) {
+        alert ("o valor deve ser um número.");
+        document.getElementById("val").value = "";
+        document.getElementById("val").focus();
+        
+        return
+    } 
+
+    if (!Number(juros)) {
+        alert ("o juros deve ser um número.");
+        document.getElementById("ju").value = "";
+        document.getElementById("ju").focus();
+        return
+    }
+    if (!Number(mes)) {
+        alert ("o mês deve ser um número.");
+        document.getElementById("mes").value = "";
+        document.getElementById("mes").focus();
+        return
+    }
+
    
     let resultado = 0;
     for(let i = 1; i <= mes; i++){
         resultado = valor * (1+(juros/100));
         valor = resultado;
     }
-        if (!Number(valor)) {
-            alert ("o valor deve ser um número.");
-            return
-        } 
-        if (!Number(juros)) {
-            alert ("o juros deve ser um número.");
-            return
-        }
-        if (!Number(mes)) {
-            alert ("o mês deve ser um número.");
-            return
-        }
+        
+
     
     document.write("O Resultado é " + resultado);
 }
