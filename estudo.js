@@ -2,6 +2,8 @@
 //console.log("");
 //document.write("");
 
+
+
 var tabuada = 8;
 
 function meChame(nome){
@@ -31,6 +33,13 @@ function quadrado(){
         document.write("O Quadrado de " + i + " é " + (i*i)+ "<br>")
     }
 }
+
+
+function moeda(atual){
+    return atual.toLocaleString('pt-br',{style: 'currency', currency: 'BRL'});
+}
+
+
 function total(){
 
     let valor = document.getElementById("val").value;
@@ -60,37 +69,15 @@ function total(){
 
    
     let resultado = 0;
+    let texto = ""
     for(let i = 1; i <= mes; i++){
         resultado = valor * (1+(juros/100));
         valor = resultado;
+        texto += "Mês " + i  + " valor: " + moeda(resultado) + <br>;
+        //document.write("Mês " + i  + " valor: " + moeda (resultado) + "<br>")
     }
-        
-
-    
-    document.write("O Resultado é " + resultado);
+      document.getElementById("meses").innerHTML = texto;
+      document.getElementById("total").innerHTML = "O Resultado é " + moeda (resultado);
+    //document.write("O Resultado é " + moeda (resultado));
 }
-
-function soma(){
-    let n1 = document.getElementById ("n1").value;
-    let n2 = document.getElementById ("n2").value;
-    let n3 = document.getElementById ("n3").value;
-    let r = Number(n1) + Number(n2) + Number(n3);
-    document.getElementById("resultado").innerHTML = r;
- }
-
- function media(){
-    let n1 = document.getElementById ("n1").value;
-    let n2 = document.getElementById ("n2").value;
-    let n3 = document.getElementById ("n3").value;
-    let r = (Number(n1) + Number(n2) + Number(n3))/3;
-    document.getElementById("resultado").innerHTML = r;
- }
-
- function necessário(){
-    let n1 = document.getElementById ("n1").value;
-    let n2 = document.getElementById ("n2").value;
-    let n3 = document.getElementById ("n3").value;
-    let r = 180 - (Number(n1) + Number(n2) + Number(n3));
-    document.getElementById("resultado").innerHTML = r;
- }
 
