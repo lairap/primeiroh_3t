@@ -33,3 +33,11 @@
     color: aliceblue;
     cursor: pointer;
 }
+
+.listaMensal {
+    padding: 10px;
+    background: rgb(209, 183, 240);
+    width: 200px;
+
+    
+}
