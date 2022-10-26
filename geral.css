@@ -1,11 +1,35 @@
 .calculadora {
     padding: 10px;
     background: rgb(209, 183, 240);
-    width: 180px;
+    width: 200px;
+    border-radius: 5px;
     
 }
+.calculadora input{
+    background: rgb(230, 222, 236);
+    color: rgb(47, 37, 56);
+    border-radius: 5px;
+}
+
+.spResul {
+    background: rgb(164, 139, 194);
+    color: aliceblue;
+    padding: 5px;
+    margin: 5px;
+    border-radius: 3px;
+}
+
 #btnCal {
     width: 50px;
     padding: 5px;
-    background: rgb(137, 105, 175);
+    background: rgb(164, 139, 194);
+    margin-top: 13px;
+    color: aliceblue;
+    border-radius: 5px;
+}
+
+#btnCal:hover {
+    background: rgb(97, 81, 117);
+    color: aliceblue;
+    cursor: pointer;
 }
