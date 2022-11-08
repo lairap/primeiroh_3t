@@ -81,3 +81,23 @@ function total(){
     //document.write("O Resultado é " + moeda (resultado));
 }
 
+function calculaRaiz (){
+    
+    let = document.getElementById ("a")
+    let = document.getElementById ("b")
+    let = document.getElementById ("c")
+
+    let delta = (b*b) - 4*a*c
+    let raizdelta = sqrt(4*a*c)
+    
+    if (delta < 0){
+
+    }
+
+    else if (delta == 0){
+
+    } else {
+
+    }
+
+}
