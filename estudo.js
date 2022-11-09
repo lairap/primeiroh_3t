@@ -81,23 +81,21 @@ function total(){
     //document.write("O Resultado é " + moeda (resultado));
 }
 
-function calculaRaiz (){
-    
-    let = document.getElementById ("a")
-    let = document.getElementById ("b")
-    let = document.getElementById ("c")
-
-    let delta = (b*b) - 4*a*c
-    let raizdelta = sqrt(4*a*c)
-    
+function calculaRaiz(){
+    let a = document.getElementById("a").value;
+    let b = document.getElementById("b").value;
+    let c = document.getElementById("c").value;
+    let delta = (Numbe(b))*(Number(b)) - (4*Number);
+    let x1,x2 =;
     if (delta < 0){
+            document.getElementById("raiz").innerHTML = "Não tem raiz real :(";
 
     }
-
     else if (delta == 0){
-
-    } else {
-
+            x1 = (-b)/(2*a);
+            document.getElementById("raiz").innerHTML = "X1 = X2 = "
     }
-
+    else{
+    x1 = ((Number(-b)) + Math.sqrt(Number(delta)))/2*a
+    }
 }
